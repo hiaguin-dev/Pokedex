@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokédex</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <div class="pokeball-icon"></div>
+      <h1>Pokédex</h1>
+    </div>
+    <div class="header-controls">
+      <div class="search-wrapper">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="text" id="search" placeholder="Buscar Pokémon..." />
+      </div>
+      <select id="type-filter">
+        <option value="">Todos os tipos</option>
+        <option value="normal">Normal</option>
+        <option value="fire">Fogo</option>
+        <option value="water">Água</option>
+        <option value="electric">Elétrico</option>
+        <option value="grass">Planta</option>
+        <option value="ice">Gelo</option>
+        <option value="fighting">Lutador</option>
+        <option value="poison">Veneno</option>
+        <option value="ground">Terra</option>
+        <option value="flying">Voador</option>
+        <option value="psychic">Psíquico</option>
+        <option value="bug">Inseto</option>
+        <option value="rock">Pedra</option>
+        <option value="ghost">Fantasma</option>
+        <option value="dragon">Dragão</option>
+      </select>
+    </div>
+  </div>
+</header>
+
+<nav class="regions-nav">
+  <button class="region-tab active" data-region="kanto">Kanto</button>
+  <button class="region-tab disabled" data-region="johto">Johto</button>
+  <button class="region-tab disabled" data-region="hoenn">Hoenn</button>
+</nav>
+
+<div class="stats-bar">
+  <span id="pokemon-count">0</span> Pokémons encontrados
+</div>
+
+<div id="loading">
+  <div class="pokeball-spin"></div>
+  <span class="loading-text">Carregando Pokédex...</span>
+</div>
+
+<div class="grid" id="grid" style="display:none;"></div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" id="modal">
+    <div class="modal-header" id="modal-header">
+      <button class="close-btn" id="close-btn">✕</button>
+      <div class="modal-number" id="modal-number"></div>
+      <div class="modal-name" id="modal-name"></div>
+      <div class="modal-types" id="modal-types"></div>
+      <img class="modal-img" id="modal-img" src="" alt="" />
+    </div>
+    <div class="modal-body">
+      <p class="modal-description" id="modal-desc"></p>
+
+      <div class="info-grid">
+        <div class="info-box">
+          <div class="info-label">Altura</div>
+          <div class="info-value" id="m-height">—</div>
+        </div>
+        <div class="info-box">
+          <div class="info-label">Peso</div>
+          <div class="info-value" id="m-weight">—</div>
+        </div>
+        <div class="info-box">
+          <div class="info-label">Exp. Base</div>
+          <div class="info-value" id="m-exp">—</div>
+        </div>
+        <div class="info-box">
+          <div class="info-label">Geração</div>
+          <div class="info-value" id="m-gen">I</div>
+        </div>
+      </div>
+
+      <div class="section-title">Habilidades</div>
+      <div class="abilities-list" id="m-abilities"></div>
+
+      <div class="stats-section">
+        <div class="section-title" style="margin-bottom:12px;">Estatísticas Base</div>
+        <div id="m-stats"></div>
+      </div>
+
+      <div class="nav-btns">
+        <button class="nav-btn" id="prev-btn">← <span id="prev-name">Anterior</span></button>
+        <button class="nav-btn" id="next-btn"><span id="next-name">Próximo</span> →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
