@@ -1,8 +1,17 @@
 # Pokédex
 
-Uma Pokédex interativa desenvolvida com HTML, CSS e JavaScript, utilizando a [PokéAPI](https://pokeapi.co/) para obter informações sobre os Pokémon da região de Kanto.
+Uma Pokédex interativa desenvolvida com HTML, CSS e JavaScript, utilizando a [PokéAPI](https://pokeapi.co/) para obter informações sobre os Pokémon.
 
-O projeto permite explorar os 151 Pokémon da primeira geração, consultar suas características e visualizar informações detalhadas em uma interface interativa.
+Atualmente, o projeto contempla os 151 Pokémon da primeira geração, pertencentes à região de Kanto, com funcionalidades de pesquisa, filtros e consulta de informações detalhadas.
+
+O objetivo é expandir a Pokédex gradualmente, adicionando novas regiões e gerações de Pokémon.
+
+## Roadmap
+
+- [x] Região de Kanto (1ª geração)
+- [ ] Região de Johto (2ª geração)
+- [ ] Região de Hoenn (3ª geração)
+- [ ] Expansão para outras regiões futuramente
 
 ## Funcionalidades
 
